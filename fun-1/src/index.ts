@@ -5,7 +5,6 @@ import { Request, Response } from "@google-cloud/functions-framework";
 export const helloTSHttp = (req: Request, res: Response) => {
   const { headers } = req;
   if (headers.accept === "application/json") {
-    console.log("yo yo yo yo");
     return res.json({ message: "Hello World from TS Function 1" });
   }
   return res.send("Hello World from TS Function 1");
